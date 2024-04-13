@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta
+            name="viewport"
+            content="width=device-width, initial-scale=1.0" />
+        <title>Custom Countdown</title>
+        <link
+            rel="stylesheet"
+            href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"
+            integrity="sha512-SnH5WK+bZxgPHs44uWIX+LLJAJ9/2PkPKZ5QiAj6Ta86w+fsb2TkcmfRyVX3pBnMFcV7oQPJkl9QevSCWr3W6A=="
+            crossorigin="anonymous"
+            referrerpolicy="no-referrer" />
+        <link
+            rel="stylesheet"
+            href="./style.css" />
+        <script
+            src="./script.js"
+            defer></script>
+    </head>
+    <body>
+        <video
+            class="video-bg"
+            loop
+            muted
+            autoplay>
+            <source src="./time.mp4" />
+        </video>
+        <div class="video-overlay"></div>
+
+        <div class="container">
+            <div id="input-container">
+                <h1>Create A Custom Countdown</h1>
+                <form
+                    class="form"
+                    id="countdown-form">
+                    <label for="title">Title</label>
+                    <input
+                        type="text"
+                        name=""
+                        id="title"
+                        placeholder="What are you counting down to?" />
+                    <label for="date-picker">Select a Date</label>
+                    <input
+                        type="date"
+                        id="date-picker" />
+                    <button type="submit">Submit</button>
+                </form>
+            </div>
+
+            <div
+                class="countdown"
+                id="countdown"
+                hidden>
+                <h1 id="countdown-title"></h1>
+                <ul>
+                    <li><span></span>Days</li>
+                    <li><span></span>Hours</li>
+                    <li><span></span>Minutes</li>
+                    <li><span></span>Seconds</li>
+                </ul>
+                <button id="countdown-button">Reset</button>
+            </div>
+
+            <div
+                class="complete"
+                id="complete"
+                hidden>
+                <h1 class="complete-title">Countdown Complete!</h1>
+                <h1 id="complete-info">Coountdown finished on 26-11-2000</h1>
+                <button id="complete-button">Start A New Countdown</button>
+            </div>
+        </div>
+    </body>
+</html>

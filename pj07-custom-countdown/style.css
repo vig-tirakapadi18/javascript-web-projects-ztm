@@ -1,0 +1,207 @@
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&family=Nunito:ital,wght@0,200..1000;1,200..1000&family=Pathway+Extreme:ital,opsz,wght@0,8..144,100..900;1,8..144,100..900&display=swap");
+
+html {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    min-height: 100vh;
+    overflow-y: hidden;
+    display: flex;
+    align-items: center;
+    font-family: "Montserrat", Helvetica, Verdana, Geneva, Tahoma, sans-serif;
+}
+
+/* Video Background */
+.video-bg {
+    position: fixed;
+    right: 0;
+    bottom: 0;
+    width: 100vw;
+    height: auto;
+}
+
+video {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.video-overlay {
+    position: fixed;
+    left: 0;
+    top: 0;
+    height: 100vh;
+    width: 100vw;
+    background-color: rgba(0, 0, 0, 0.5);
+    backdrop-filter: blur(0.25rem);
+}
+
+.container {
+    min-width: 580px;
+    min-height: 304px;
+    color: black;
+    margin: 0 auto;
+    padding: 25px 50px;
+    border-radius: 5px;
+    z-index: 2;
+    display: flex;
+    justify-content: center;
+    background-color: rgba(255, 255, 255, 0.4);
+    backdrop-filter: blur(0.5rem);
+    box-shadow: 0 15px 30px 5px rgba(0, 0, 0, 0.5);
+}
+
+.input-container {
+    position: relative;
+    top: 20px;
+}
+
+h1 {
+    font-size: 35px;
+    text-align: center;
+    margin-top: 0;
+    margin-bottom: 10px;
+}
+
+.form {
+    width: 100%;
+}
+
+label {
+    font-weight: bold;
+    margin-left: 10px;
+    display: block;
+}
+
+input {
+    width: 95%;
+    margin-bottom: 10px;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 20px;
+    background: #fff;
+    outline: none;
+}
+
+button {
+    width: 100%;
+    height: 40px;
+    border-radius: 20px;
+    margin-top: 15px;
+    border: none;
+    text-transform: uppercase;
+    background: #006959;
+    color: white;
+    cursor: pointer;
+    outline: none;
+    transition: transform 0.25s ease-in-out;
+}
+
+button:hover {
+    filter: brightness(110%);
+}
+
+button:active {
+    transform: scale(0.95);
+}
+
+ul {
+    margin-left: -45px;
+    display: flex;
+}
+
+li {
+    font-size: 30px;
+    display: inline-block;
+    list-style-type: none;
+    padding: 10px;
+    text-transform: uppercase;
+}
+
+li span {
+    display: block;
+    font-size: 80px;
+    text-align: center;
+}
+
+.complete {
+    position: relative;
+    top: 60px;
+}
+
+.complete-title {
+    animation: complete 4s infinite;
+}
+
+@keyframes complete {
+    0% {
+        color: rgb(255, 68, 0);
+    }
+    25% {
+        color: rgb(255, 225, 0);
+    }
+    50% {
+        color: rgb(0, 255, 0);
+        transform: scale(1.5);
+    }
+    75% {
+        color: rgb(30, 144, 255);
+    }
+    100% {
+        color: rgb(255, 0, 255);
+    }
+}
+
+/* Media Query: Large Smartphone (Vertical) */
+@media screen and (max-width: 600px) {
+    .video-bg {
+        height: 100vh;
+        width: 100vw;
+    }
+
+    video {
+        margin-top: -1px;
+        object-fit: cover;
+        object-position: 70%;
+    }
+
+    .container {
+        min-height: 200px;
+        padding: 15px;
+        margin: 10px;
+        min-width: unset;
+        width: 95vw;
+    }
+
+    .input-container {
+        top: unset;
+    }
+
+    .countdown {
+        position: relative;
+        top: 10px;
+    }
+
+    .form {
+        width: unset;
+    }
+
+    input {
+        width: 93%;
+    }
+
+    h1 {
+        font-size: 20px;
+    }
+
+    li {
+        font-size: 10px;
+    }
+
+    li span {
+        font-size: 1.5rem;
+    }
+}
