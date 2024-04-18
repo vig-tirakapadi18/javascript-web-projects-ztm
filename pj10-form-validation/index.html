@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta
+            name="viewport"
+            content="width=device-width, initial-scale=1.0" />
+        <title>Registration Form</title>
+        <link
+            rel="stylesheet"
+            href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"
+            integrity="sha512-SnH5WK+bZxgPHs44uWIX+LLJAJ9/2PkPKZ5QiAj6Ta86w+fsb2TkcmfRyVX3pBnMFcV7oQPJkl9QevSCWr3W6A=="
+            crossorigin="anonymous"
+            referrerpolicy="no-referrer" />
+        <link
+            rel="stylesheet"
+            href="./style.css" />
+        <script
+            src="./script.js"
+            defer></script>
+    </head>
+    <body>
+        <div class="container">
+            <h1>Register Today!</h1>
+
+            <form
+                id="form"
+                novalidate>
+                <div class="form-group">
+                    <label for="name">Full Name</label>
+                    <span><i class="fa-solid fa-user"></i></span>
+                    <input
+                        type="text"
+                        id="name"
+                        placeholder="Your Name"
+                        required
+                        minlength="3"
+                        maxlength="25"
+                        name="name" />
+                </div>
+
+                <div class="form-group">
+                    <label for="phone">Phone Number</label>
+                    <span><i class="fa-solid fa-phone"></i></span>
+                    <input
+                        type="tel"
+                        id="phone"
+                        placeholder="999 999 9999"
+                        required
+                        pattern="[0-9]{3} [0-9]{3} [0-9]{4}"
+                        name="phone" />
+                </div>
+
+                <div class="form-group">
+                    <label for="email">Email Address</label>
+                    <span><i class="fa-solid fa-envelope"></i></span>
+                    <input
+                        type="email"
+                        id="email"
+                        placeholder="vig@gmail.com"
+                        required
+                        name="email" />
+                </div>
+
+                <div class="form-group">
+                    <label for="website">Website URL</label>
+                    <span><i class="fa-solid fa-link"></i></span>
+                    <input
+                        type="url"
+                        id="website"
+                        placeholder="https://vig.com"
+                        required
+                        name="website" />
+                </div>
+
+                <div class="form-group">
+                    <label for="password">Password</label>
+                    <span><i class="fa-solid fa-lock"></i></span>
+                    <input
+                        type="password"
+                        id="password"
+                        placeholder="######## (Min. 8 characters)"
+                        required
+                        pattern="^(?=.*\d)(?=.*[a-z])(?=.*[A-Z])(?=.*[a-zA-Z]).{8,}$"
+                        title="Password must include at least 1 uppercase character, 1 lowercase character and 1 number!" />
+                </div>
+
+                <div class="form-group">
+                    <label for="confirm-password">Confirm Password</label>
+                    <span><i class="fa-solid fa-lock"></i></span>
+                    <input
+                        type="password"
+                        id="confirm-password"
+                        placeholder="########"
+                        required
+                        pattern="^(?=.*\d)(?=.*[a-z])(?=.*[A-Z])(?=.*[a-zA-Z]).{8,}$"
+                        name="confirm-password" />
+                </div>
+
+                <button type="submit">Register</button>
+            </form>
+
+            <div
+                class="message-container"
+                id="message-container">
+                <h3 id="message">Don&apos;t Hesitate!</h3>
+            </div>
+        </div>
+    </body>
+</html>
