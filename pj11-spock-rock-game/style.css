@@ -1,0 +1,180 @@
+@import url("https://fonts.googleapis.com/css2?family=Karla:ital,wght@0,200..800;1,200..800&family=Montserrat:ital,wght@0,100..900;1,100..900&family=Nunito:ital,wght@0,200..1000;1,200..1000&family=Pathway+Extreme:ital,opsz,wght@0,8..144,100..900;1,8..144,100..900&family=Raleway:ital,wght@0,100..900;1,100..900&display=swap");
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    min-height: 100vh;
+    background-color: #11242a;
+    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 80 80' width='80' height='80'%3E%3Cg fill='%23ffffff' fill-opacity='0.4'%3E%3Cpath d='M0 0h80v80H0V0zm20 20v40h40V20H20zm20 35a15 15 0 1 1 0-30 15 15 0 0 1 0 30z' opacity='.5'%3E%3C/path%3E%3Cpath d='M15 15h50l-5 5H20v40l-5 5V15zm0 50h50V15L80 0v80H0l15-15zm32.07-32.07l3.54-3.54A15 15 0 0 1 29.4 50.6l3.53-3.53a10 10 0 1 0 14.14-14.14zM32.93 47.07a10 10 0 1 1 14.14-14.14L32.93 47.07z'%3E%3C/path%3E%3C/g%3E%3C/svg%3E");
+    font-family: "Raleway", "Montserrat", Helvetica, Verdana, Geneva, Tahoma,
+        sans-serif;
+    margin-inline: 30%;
+    text-align: center;
+}
+
+.game-container {
+    background-color: rgba(255, 255, 255, 0.75);
+    backdrop-filter: blur(0.25rem);
+    display: flex;
+    flex-direction: column;
+    box-shadow: 0px 30px 15px 5px rgba(0, 0, 0, 0.5);
+    /* box-shadow: 0 10px 20px -5px rgba(0, 0, 0, 0.5); */
+    border-radius: 0.35rem;
+    width: 100%;
+    z-index: 1;
+}
+
+.header {
+    background-color: dodgerblue;
+    padding: 1.5rem 1rem;
+    border-top-right-radius: 0.35rem;
+    border-top-left-radius: 0.35rem;
+    font-size: 0.85rem;
+    color: white;
+}
+
+.result-text,
+h2 {
+    margin-block: 1rem;
+}
+
+.icon-group {
+    display: flex;
+    justify-content: space-between;
+    cursor: pointer;
+}
+
+.fa-solid {
+    font-size: 3rem;
+}
+
+.fa-rotate {
+    font-size: 1.5rem;
+    color: green;
+    text-align: center;
+}
+
+.player-container,
+.computer-container {
+    margin-inline: 1rem;
+}
+
+.reset-btn {
+    margin-bottom: 1rem;
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 0.5rem;
+    background-color: #e53935;
+    color: white;
+    width: 10rem;
+    margin-inline: auto;
+    outline: none;
+    border: none;
+    border-radius: 10px;
+    cursor: pointer;
+    transition: scale 0.25s;
+    height: 2.5rem;
+}
+
+.reset-btn:hover {
+    background-color: #d43330;
+}
+
+.reset-btn:active {
+    scale: 0.95;
+}
+
+.result-text {
+    text-align: center;
+}
+
+#player .fa-solid,
+#player .choice {
+    color: dodgerblue;
+}
+
+#computer .fa-solid,
+#computer .choice {
+    color: #c62828;
+}
+
+.selected {
+    color: black !important;
+}
+
+@media screen and (max-width: 767px) {
+    body {
+        margin-inline: 5%;
+    }
+    .game-container {
+        width: 100%;
+    }
+
+    .header {
+        font-size: 0.45rem;
+    }
+
+    h2 {
+        font-size: 0.75rem;
+    }
+
+    .fa-solid {
+        font-size: 1.5rem;
+        margin-inline: 0.5rem;
+    }
+
+    .fa-rotate {
+        font-size: 1.25rem;
+    }
+
+    .result-text,
+    h2 {
+        margin-block: 0.5rem;
+    }
+
+    .reset-btn {
+        gap: 0;
+        font-size: 0.25rem;
+        text-wrap: nowrap;
+        height: 2rem;
+        width: 8rem;
+    }
+}
+
+@media (min-width: 768px) and (max-width: 1300px) {
+    body {
+        margin-inline: 10%;
+    }
+
+    .game-container {
+        max-width: 100%;
+    }
+
+    .header {
+        font-size: 0.75rem;
+    }
+
+    h2 {
+        font-size: 1.5rem;
+    }
+
+    .fa-solid {
+        font-size: 2.5rem;
+        margin-inline: 0.75rem;
+    }
+
+    .fa-rotate {
+        font-size: 1.5rem;
+    }
+
+    .result-text {
+        margin-bottom: 1rem;
+        font-size: 1.5rem;
+    }
+}
