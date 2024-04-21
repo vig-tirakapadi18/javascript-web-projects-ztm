@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta
+            name="viewport"
+            content="width=device-width, initial-scale=1.0" />
+        <title>NASA API Pictures</title>
+        <link
+            rel="stylesheet"
+            href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"
+            integrity="sha512-SnH5WK+bZxgPHs44uWIX+LLJAJ9/2PkPKZ5QiAj6Ta86w+fsb2TkcmfRyVX3pBnMFcV7oQPJkl9QevSCWr3W6A=="
+            crossorigin="anonymous"
+            referrerpolicy="no-referrer" />
+        <link
+            rel="stylesheet"
+            href="./style.css" />
+        <link
+            rel="icon"
+            type="image/png"
+            href="https://s2.googleusercontent.com/s2/favicons?domain=www.nasa.gov" />
+        <script
+            src="./script.js"
+            defer></script>
+    </head>
+    <body>
+        <div class="loader hidden">
+            <img
+                src="./rocket.svg"
+                alt="Rocket" />
+        </div>
+        <!-- CONTAINER -->
+        <div class="container">
+            <!-- NAV -->
+            <div class="nav-container">
+                <span class="background"></span>
+                <!-- RESULTS NAV -->
+                <span
+                    class="nav-items"
+                    id="results-nav">
+                    <h3
+                        class="clickable"
+                        onclick="updateContent('favorites')">
+                        Favorites
+                    </h3>
+                    <h3>&nbsp;&nbsp;&nbsp;•&nbsp;&nbsp;&nbsp;</h3>
+                    <h3
+                        class="clickable"
+                        onclick="getNASAPictures()">
+                        Load More
+                    </h3>
+                </span>
+
+                <!-- FAVORITES NAV -->
+                <span
+                    class="nav-items hidden"
+                    id="favorite-nav">
+                    <h3
+                        class="clickable"
+                        onclick="getNASAPictures()">
+                        Load More NASA Images
+                    </h3>
+                </span>
+            </div>
+
+            <!-- IMAGES CONTAINER -->
+            <div class="images-container"></div>
+        </div>
+
+        <!-- SAVE CONFIRMATION -->
+        <div
+            class="save-confirmed"
+            hidden>
+            <h2>ADDED!</h2>
+        </div>
+    </body>
+</html>
