@@ -1,0 +1,181 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta
+            name="viewport"
+            content="width=device-width, initial-scale=1.0" />
+        <title>Drag & Drop</title>
+        <link
+            rel="stylesheet"
+            href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"
+            integrity="sha512-SnH5WK+bZxgPHs44uWIX+LLJAJ9/2PkPKZ5QiAj6Ta86w+fsb2TkcmfRyVX3pBnMFcV7oQPJkl9QevSCWr3W6A=="
+            crossorigin="anonymous"
+            referrerpolicy="no-referrer" />
+        <link
+            rel="stylesheet"
+            href="./style.css" />
+        <script
+            src="./script.js"
+            defer></script>
+    </head>
+    <body>
+        <h1 class="main-title">Welcome!</h1>
+
+        <div class="drag-container">
+            <ul class="drag-list">
+                <!-- BACKLOG COLUMN -->
+                <li class="drag-column backlog-column">
+                    <span class="header">
+                        <h1>Backlog</h1>
+                    </span>
+
+                    <div
+                        id="backlog-content"
+                        class="custom-scroll">
+                        <ul
+                            class="drag-item-list"
+                            id="backlog-list"
+                            ondrop="dropItem(event)"
+                            ondragover="allowItemDrop(event)"
+                            ondragenter="dragEnter(0)"></ul>
+                    </div>
+
+                    <div class="add-btn-group">
+                        <div
+                            class="add-btn"
+                            onclick="showInputBox(0)">
+                            <i class="fa-solid fa-plus plus-sign"></i>
+                            <span>Add Item</span>
+                        </div>
+
+                        <div
+                            class="add-btn solid"
+                            onclick="hideInputBox(0)">
+                            <span>Save Item</span>
+                        </div>
+                    </div>
+                    <div class="add-container">
+                        <div
+                            class="add-item"
+                            contenteditable="true"></div>
+                    </div>
+                </li>
+
+                <!-- PROGRESS COLUMN -->
+                <li class="drag-column progress-column">
+                    <span class="header">
+                        <h1>Progress</h1>
+                    </span>
+
+                    <div
+                        id="progress-content"
+                        class="custom-scroll">
+                        <ul
+                            class="drag-item-list"
+                            id="progress-list"
+                            ondrop="dropItem(event)"
+                            ondragover="allowItemDrop(event)"
+                            ondragenter="dragEnter(1)"></ul>
+                    </div>
+
+                    <div class="add-btn-group">
+                        <div
+                            class="add-btn"
+                            onclick="showInputBox(1)">
+                            <i class="fa-solid fa-plus plus-sign"></i>
+                            <span>Add Item</span>
+                        </div>
+
+                        <div
+                            class="add-btn solid"
+                            onclick="hideInputBox(1)">
+                            <span>Save Item</span>
+                        </div>
+                    </div>
+                    <div class="add-container">
+                        <div
+                            class="add-item"
+                            contenteditable="true"></div>
+                    </div>
+                </li>
+
+                <!-- COMPLETE COLUMN -->
+                <li class="drag-column complete-column">
+                    <span class="header">
+                        <h1>Complete</h1>
+                    </span>
+
+                    <div
+                        id="complete-content"
+                        class="custom-scroll">
+                        <ul
+                            class="drag-item-list"
+                            id="complete-list"
+                            ondrop="dropItem(event)"
+                            ondragover="allowItemDrop(event)"
+                            ondragenter="dragEnter(2)"></ul>
+                    </div>
+
+                    <div class="add-btn-group">
+                        <div
+                            class="add-btn"
+                            onclick="showInputBox(2)">
+                            <i class="fa-solid fa-plus plus-sign"></i>
+                            <span>Add Item</span>
+                        </div>
+
+                        <div
+                            class="add-btn solid"
+                            onclick="hideInputBox(2)">
+                            <span>Save Item</span>
+                        </div>
+                    </div>
+                    <div class="add-container">
+                        <div
+                            class="add-item"
+                            contenteditable="true"></div>
+                    </div>
+                </li>
+
+                <!-- ON-HOLD COLUMN -->
+                <li class="drag-column on-hold-column">
+                    <span class="header">
+                        <h1>On Hold</h1>
+                    </span>
+
+                    <div
+                        id="on-hold-content"
+                        class="custom-scroll">
+                        <ul
+                            class="drag-item-list"
+                            id="on-hold-list"
+                            ondrop="dropItem(event)"
+                            ondragover="allowItemDrop(event)"
+                            ondragenter="dragEnter(3)"></ul>
+                    </div>
+
+                    <div class="add-btn-group">
+                        <div
+                            class="add-btn"
+                            onclick="showInputBox(3)">
+                            <i class="fa-solid fa-plus plus-sign"></i>
+                            <span>Add Item</span>
+                        </div>
+
+                        <div
+                            class="add-btn solid"
+                            onclick="hideInputBox(3)">
+                            <span>Save Item</span>
+                        </div>
+                    </div>
+                    <div class="add-container">
+                        <div
+                            class="add-item"
+                            contenteditable="true"></div>
+                    </div>
+                </li>
+            </ul>
+        </div>
+    </body>
+</html>
