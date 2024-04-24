@@ -1,0 +1,180 @@
+@import url("https://fonts.googleapis.com/css2?family=Karla:ital,wght@0,200..800;1,200..800&family=Montserrat:ital,wght@0,100..900;1,100..900&family=Nunito:ital,wght@0,200..1000;1,200..1000&family=Pathway+Extreme:ital,opsz,wght@0,8..144,100..900;1,8..144,100..900&family=Raleway:ital,wght@0,100..900;1,100..900&display=swap");
+
+*,
+*::after,
+*::before {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    overflow-x: hidden;
+    font-family: Karla, Verdana, Geneva, Tahoma, sans-serif;
+    background: linear-gradient(
+        180deg #ffffff 0%,
+        #f3f8f7 49.91%,
+        #fff9f5 94.19
+    );
+    color: #54575a;
+}
+
+.wrapper {
+    position: relative;
+    width: 1440px;
+    height: 1379px;
+    margin: auto;
+}
+
+.brand-img {
+    position: absolute;
+    width: 193px;
+    height: 47.64px;
+    left: 221px;
+    top: 50.25px;
+}
+
+.title {
+    position: absolute;
+    width: 458px;
+    height: 135px;
+    left: 221px;
+    top: 236px;
+    font-style: normal;
+    font-weight: 500;
+    font-size: 64px;
+    line-height: 67px;
+}
+
+.text {
+    position: absolute;
+    width: 394px;
+    height: 96px;
+    left: 221px;
+    top: 403px;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 20px;
+    line-height: 32px;
+}
+
+.app-store-btn,
+.app-store-btn img {
+    width: 138.44px;
+    height: 46.28px;
+}
+
+.app-store-btn {
+    position: absolute;
+    left: 221px;
+    top: 531px;
+}
+
+.google-play-btn,
+.google-play-btn img {
+    width: 156.19px;
+    height: 46.28px;
+}
+
+.google-play-btn {
+    position: absolute;
+    left: 381.81px;
+    top: 531px;
+}
+
+.main-image-container {
+    position: absolute;
+    width: 535.72px;
+    height: 309.27px;
+    left: 683.28px;
+    top: 229.73px;
+}
+
+.main-image-container img {
+    height: 411.15px;
+}
+
+.profile-img {
+    position: absolute;
+    height: 444px;
+    left: 737px;
+    right: 479px;
+    top: 686px;
+}
+
+.product-img {
+    position: absolute;
+    height: 222px;
+    left: 737px;
+    right: 479px;
+    top: 1157px;
+}
+
+.orders-img {
+    position: absolute;
+    height: 470px;
+    left: 497px;
+    right: 737px;
+    top: 913px;
+}
+
+.cart-img {
+    position: absolute;
+    height: 222px;
+    left: 221px;
+    right: 995px;
+    top: 1157px;
+}
+
+.home-img {
+    position: absolute;
+    height: 470px;
+    left: 995px;
+    right: 221px;
+    top: 908px;
+}
+
+.background-toggles {
+    position: absolute;
+    right: 150px;
+    top: 70px;
+    display: flex;
+}
+
+.background-toggles > div {
+    height: 25px;
+    width: 25px;
+    border-radius: 1rem;
+    margin-right: 10px;
+    box-shadow: 0 2px 5px 2px rgba(0, 0, 0, 0.3);
+    cursor: pointer;
+}
+
+.bg-1 {
+    background-color: #ffffff;
+    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='20' height='16' viewBox='0 0 20 16'%3E%3Cg fill='%230891b2' fill-opacity='0.09'%3E%3Cpath fill-rule='evenodd' d='M0 .04C2.6.22 4.99 1.1 7 2.5A13.94 13.94 0 0 1 15 0h4c.34 0 .67.01 1 .04v2A12 12 0 0 0 7.17 12h5.12A7 7 0 0 1 20 7.07V14a5 5 0 0 0-3-4.58A5 5 0 0 0 14 14H0V7.07c.86.12 1.67.4 2.4.81.75-1.52 1.76-2.9 2.98-4.05C3.79 2.83 1.96 2.2 0 2.04v-2z'/%3E%3C/g%3E%3C/svg%3E");
+}
+
+.bg-2 {
+    background: #2bc0e4;
+    background: -webkit-linear-gradient(to right, #eaecc6, #2bc0e4);
+    background: linear-gradient(to right, #eaecc6, #2bc0e4);
+}
+
+.bg-3 {
+    background: #dae2f8;
+    background: -webkit-linear-gradient(to top, #d6a4a4, #dae2f8);
+    background: linear-gradient(to top, #d6a4a4, #dae2f8);
+}
+
+.bg-4 {
+    background: #ffeeee;
+    background: -webkit-linear-gradient(to top, #ddefbb, #ffeeee);
+    background: linear-gradient(to top, #ddefbb, #ffeeee);
+}
+
+.bg-5 {
+    background: #ed4264;
+    background: -webkit-linear-gradient(to right, #ffedbc, #ed4264);
+    background: linear-gradient(to right, #ffedbc, #ed4264);
+}
